@@ -1,0 +1,303 @@
+/* CSS Reset / Normalize */
+/* Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações, coloque nas sessões indicadas */
+
+:root {
+    /* Insira a variável das outras cores inspecionando o modelo do figma */
+    /* Se esforce para trabalhar com variáveis, é uma dica profissional valiosa */
+    --cor-de-fundo: #fcf5f5;
+    --cor-de-link: #092cf1c5;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: rgb(240, 236, 236);
+    font-family: 'Raleway';
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+
+
+
+a {
+    text-decoration: none;
+    color: var(--cor-de-link);
+}
+
+/* Neste desafio, gostaríamos que praticassem a metodologia BEM, caso se sintam à vontade de utilizá-la. */
+
+/* Menu */
+.menu {
+    display: flex;
+    flex-direction: column;
+    
+    gap: 15px;
+    margin-top: 5px;
+}
+
+.menu__list {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+    flex-direction: row;
+    gap: 15px;
+}
+.menu__list__item__contato{
+    margin-top: 55px;
+}
+
+/* Adicione este estilo para definir a cor de fundo quando o item do menu está em hover */
+.menu__list__item.hovered {
+    background-color: lightgray;
+}
+
+
+
+/* Sessão Title */
+.title {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+.title__div {
+    display: flex;
+    flex-direction: column;
+}
+.title__profile{
+    width: 100px;
+    height: auto;
+    margin-top: 25px;
+}
+
+.about__container {
+    overflow-wrap: break-word;
+    flex-direction: column;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+
+/* Sessão About */
+.about {
+    
+}
+
+/* Sessão de Skills/Habilidades */
+.skills__hobbies {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(193, 214, 207);
+}
+
+
+
+
+.skills__line {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+
+.skills__box,
+.academic__courses__box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   
+
+    
+    
+}
+.hobbies__box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 15px;
+    
+}
+.hobbies__box, .skills__box, .academic__courses__box img {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.hobbies__line {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+.skills__item,
+.hobbies__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.skills__img,
+.hobbies__img,
+.academic__courses__item__img,
+.formcontato__img {
+    width: 65px;
+    height: auto;
+    
+}
+
+/* Sessão Hobbies */
+.hobbies {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(220, 228, 230);
+    
+}
+
+.hobbies__title {
+    margin-top: 100px;
+    
+}
+
+/* Experiência Acadêmica */
+.academic {
+    margin-top: 65px;
+    display: flex;
+    flex-direction: column;
+    background-color:rgb(235, 225, 225) ;
+    
+    justify-content: space-between;
+}
+.academic__title,.hobbies__title, .skills__title {
+    align-self: center;
+    font-size: 35px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+.academic__courses {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    justify-content: space-between;
+}
+
+/* Experiência */
+.experience {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgb(199, 195, 195);
+}
+.experience__repo a:hover, .experience__demo a:hover {
+
+    background-color: blue;
+    padding: 5px 5px; 
+    border-radius: 5px; 
+    text-decoration: none; 
+    color: black; 
+}
+/* Contato */
+.formcontato {
+    display: flex;
+    align-items: center;
+    gap: 150px;
+}
+
+.formcontato__img {
+    width: 65px;
+    height: auto;
+}
+
+.formcontato--direita {
+    display: flex;
+    flex-direction: column;
+}
+
+.formcontato__title {
+    font-size: 15px;
+    margin-right: 20px;
+}
+
+.formcontato__text {
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.formcontato__input,
+.formcontato__textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.formcontato__button {
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Footer */
+.footer {
+    background-color: rgb(117, 110, 110);
+    font-family: rgb(221, 20, 20);
+}
+
+/* Chegou a hora de se desafiar com a responsividade, utilize como referência os breakpoints @media abaixo */
+
+/* Tablet */
+/* Tablet */
+@media (min-width: 425px) {
+    .skills__line,
+    .hobbies__line,
+    .academic__courses {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .skills__box,
+    .hobbies__box,
+    .academic__courses__box {
+        width: 100%;
+    }
+    
+}
+   
+
+
+/* Mobile */
+/* Tablet */
+@media (min-width: 768px) {
+    .skills__line,
+    .hobbies__line,
+    .academic__courses {
+        flex-direction: column;
+        align-items:flex-start;
+    
+    }
+
+    .skills__box,
+    .hobbies__box,
+    .academic__courses__box {
+        height: 100%;
+        
+    }
+    
+}
